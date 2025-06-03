@@ -26,7 +26,6 @@ __global__ void kernel() {
 void synchronizer(cudaStream_t stream, cudaEvent_t event) {
     printf("launched synchronizer\n");
 
-    // Wait for previous operations in stream to complete
     cudaStreamWaitEvent(stream, event, 0);
 
     int falseval = 0;
