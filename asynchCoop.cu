@@ -70,6 +70,7 @@ int main() {
     cudaFree(dab);
     cudaEventDestroy(event);
     cudaStreamDestroy(stream);
+	cudaStreamDestory(stream2);
 
     return 0;
 }
